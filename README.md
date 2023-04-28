@@ -1,2 +1,3 @@
-# react-login-form
+# React Login Form
+
 A simple react login form component
