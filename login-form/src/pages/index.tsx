@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import picture from "../picture.jpg";
 import Image from "next/image";
 import Form from "./form";
+import Page from "./page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,8 @@ export default function Home() {
     <>
       <HeadSection />
       <main className={`${styles.main} ${inter.className}`}>
-        <Form />
+        {/* <Form /> */}
+        <Page />
       </main>
     </>
   );
