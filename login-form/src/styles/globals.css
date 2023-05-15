@@ -85,7 +85,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -93,7 +93,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 a {
   color: inherit;
@@ -105,6 +105,8 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Navbar custom styling */
 
 .success {
   position: fixed;
@@ -133,9 +135,12 @@ a {
   border: 1px solid rgb(23, 160, 19) !important;
 }
 
-.hero-parent {
+/* Hero area custom styling */
+
+.hero-parent,
+.how-it-works {
   display: flex;
-  height: 90vh;
+  height: 70vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -157,4 +162,53 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  filter: blur(3px);
+}
+
+.hero-message-text {
+  z-index: 999;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 5em;
+  color: rgba(65, 213, 60, 0.25);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(31, 118, 28);
+  letter-spacing: 0.02em;
+}
+
+.color-change:hover {
+  color: rgba(222, 218, 87, 0.3);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(152, 157, 9);
+  cursor: default;
+  font-size: 5.2rem;
+}
+
+.btn-outline-success {
+  z-index: 99;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* How it works */
+
+.how-it-works {
+  height: 80vh;
+  flex-direction: column;
+}
+
+.how-it-works-header {
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  /* z-index: 999;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }

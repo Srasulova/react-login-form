@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import picture from "../picture.jpg";
+import picture from "../assets/picture.jpg";
 
 export default function Form() {
   const [login, setLogin] = useState({

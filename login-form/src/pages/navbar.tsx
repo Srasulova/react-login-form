@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import Logo from "../new logo.png";
+import Logo from "../assets/new logo.png";
 
 export default function NavBar() {
   return (
@@ -21,8 +21,11 @@ export default function NavBar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div
+            className="collapse navbar-collapse d-flex justify-content-between"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ">
               <li className="nav-item mx-3">
                 <a
                   className="nav-link active text-success fw-bolder hover-change-color"
@@ -37,7 +40,7 @@ export default function NavBar() {
                   className="nav-link text-success fw-bolder hover-change-color"
                   href="#"
                 >
-                  Flavors
+                  How it works
                 </a>
               </li>
               <li className="nav-item mx-3">
@@ -45,18 +48,21 @@ export default function NavBar() {
                   className="nav-link text-success fw-bolder hover-change-color"
                   href="#"
                 >
-                  Cakes Gallery
+                  Gallery
                 </a>
               </li>
             </ul>
-            <form className="d-flex mx-5" role="search">
+            <form className="d-flex " role="search">
               <input
                 className="form-control form-control-sm me-2 search-input"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-warning btn-sm" type="submit">
+              <button
+                className="btn btn-outline-warning btn-sm me-5"
+                type="submit"
+              >
                 Search
               </button>
             </form>
@@ -66,3 +72,5 @@ export default function NavBar() {
     </>
   );
 }
+
+// add the name of the company next to logo
