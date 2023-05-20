@@ -5,10 +5,11 @@ import Logo from "../assets/new logo.png";
 export default function NavBar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary ">
         <div className="container-fluid">
           <a className="navbar-brand ms-5" href="#">
-            <Image src={Logo} alt="Logo" width="50" height="50" />
+            <Image src={Logo} alt="Logo" width="80" height="80" />
+            <span className="brand-name">Milo's homemade</span>
           </a>
           <button
             className="navbar-toggler"
@@ -30,7 +31,7 @@ export default function NavBar() {
                 <a
                   className="nav-link active text-success fw-bolder hover-change-color"
                   aria-current="page"
-                  href="#"
+                  href="#hero-parent-id"
                 >
                   Home
                 </a>
@@ -38,11 +39,21 @@ export default function NavBar() {
               <li className="nav-item mx-3">
                 <a
                   className="nav-link text-success fw-bolder hover-change-color"
-                  href="#"
+                  href="#what-we-make-id"
+                >
+                  What we make
+                </a>
+              </li>
+
+              <li className="nav-item mx-3">
+                <a
+                  className="nav-link text-success fw-bolder hover-change-color"
+                  href="#how-it-works-id"
                 >
                   How it works
                 </a>
               </li>
+
               <li className="nav-item mx-3">
                 <a
                   className="nav-link text-success fw-bolder hover-change-color"
