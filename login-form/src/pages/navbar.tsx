@@ -9,7 +9,7 @@ export default function NavBar() {
         <div className="container-fluid">
           <a className="navbar-brand ms-5" href="#">
             <Image src={Logo} alt="Logo" width="80" height="80" />
-            <span className="brand-name">Milo's homemade</span>
+            <span className="brand-name">Milo&apos;s homemade</span>
           </a>
           <button
             className="navbar-toggler"
@@ -57,7 +57,7 @@ export default function NavBar() {
               <li className="nav-item mx-3">
                 <a
                   className="nav-link text-success fw-bolder hover-change-color"
-                  href="#"
+                  href="#gallery-title"
                 >
                   Gallery
                 </a>
