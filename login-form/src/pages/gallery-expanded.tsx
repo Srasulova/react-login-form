@@ -215,26 +215,22 @@ const GalleryExpanded: React.FC<GalleryExpandedProps> = ({ onLessClick }) => {
       {selectedImage && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content">
-            <div className="modal-image-container">
-              <div className="modal-image-wrapper">
-                <Image
-                  src={selectedImage}
-                  className="modal-image"
-                  alt="Enlarged Image"
-                  width={600}
-                  height={600}
-                />
-                <button
-                  className="close-button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    closeModal();
-                  }}
-                >
-                  X
-                </button>
-              </div>
-            </div>
+            <Image
+              src={selectedImage}
+              className="modal-image"
+              alt="Enlarged Image"
+              width={600}
+              height={600}
+            />
+            <button
+              className="close-button"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeModal();
+              }}
+            >
+              X
+            </button>
           </div>
         </div>
       )}
