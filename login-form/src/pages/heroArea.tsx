@@ -1,15 +1,25 @@
 import { useState } from "react";
-// import Image from "next/image";
-// import Cake from "../assets/cake picture.jpg";
+import OpenOrderModal from "./order-form";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    bootstrap: any; // Add this line to declare the bootstrap property
+  }
+}
 
 export default function Hero() {
+  const handleOrderNowClick = () => {
+    const modal = new window.bootstrap.Modal(
+      document.getElementById("orderModal")
+    );
+    modal.show();
+  };
+
   return (
     <>
       <div className="hero-parent" id="hero-parent-id">
         <div className="hero-area">
-          {/* <div className="hero-area-picture">
-            <Image src={Cake} alt="cake picture" className="cake-picture" />
-          </div> */}
           <div className="hero-components">
             <div className="hero-text">
               <h1 className="hero-message-text text-center">
@@ -23,13 +33,21 @@ export default function Hero() {
               </h1>
             </div>
             <div className="order-btn">
-              <button type="button" className="btn btn-outline-success btn-lg">
+              <button
+                type="button"
+                className="btn btn-outline-success btn-lg"
+                // data-bs-toggle="modal"
+                // data-bs-target="#orderModal"
+                onClick={handleOrderNowClick}
+              >
                 Order now
               </button>
             </div>
           </div>
         </div>
       </div>
+
+      <OpenOrderModal />
     </>
   );
 }

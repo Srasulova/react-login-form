@@ -6,9 +6,22 @@ import Customer from "../assets/customer.png";
 import delivery from "../assets/delivery-service.png";
 import order from "../assets/order.png";
 import piping from "../assets/piping.png";
-// import { OrderButton } from "./heroArea";
+import OpenOrderModal from "./order-form";
+
+declare global {
+  interface Window {
+    bootstrap: any; // Add this line to declare the bootstrap property
+  }
+}
 
 export default function HowItWorks() {
+  const handleOrderNowClick = () => {
+    const modal = new window.bootstrap.Modal(
+      document.getElementById("orderModal")
+    );
+    modal.show();
+  };
+
   return (
     <>
       <div
@@ -129,16 +142,18 @@ export default function HowItWorks() {
             </div>
           </div>
           <div className="order-btn">
-            <button type="button" className="btn btn-success btn-lg">
+            <button
+              type="button"
+              className="btn btn-success btn-lg"
+              onClick={handleOrderNowClick}
+            >
               Order now
             </button>
           </div>
         </div>
       </div>
+
+      <OpenOrderModal />
     </>
   );
 }
-
-// add animation to icons - done
-// change the font of figcapture - done
-// add order button - done
