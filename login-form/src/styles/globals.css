@@ -128,6 +128,10 @@ a {
   color: #f1557a;
 }
 
+.cart {
+  text-decoration: none !important;
+}
+
 /* Hero area custom styling */
 
 .hero-parent {

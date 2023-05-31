@@ -77,11 +77,18 @@ export default function NavBar() {
                 Search
               </button>
             </form>
+            <div className="shopping-cart d-flex me-5">
+              <a className="cart my-auto mx-2 text-success fw-bolder" href="#">
+                Cart
+              </a>
+              <i
+                className="bi bi-cart"
+                style={{ fontSize: "2rem", color: "green" }}
+              ></i>
+            </div>
           </div>
         </div>
       </nav>
     </>
   );
 }
-
-// add the name of the company next to logo

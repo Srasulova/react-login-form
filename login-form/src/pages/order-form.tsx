@@ -37,25 +37,39 @@ export default function OpenOrderModal() {
                   type="email"
                   className="form-control form-control-sm"
                   id="inputName"
+                  required
                 />
               </div>
+              <div className="col-md-6 date">
+                <label htmlFor="date-input" className="form-label date-label">
+                  Required date
+                </label>
+                <input
+                  className="form-control form-control-sm"
+                  type="date"
+                  id="date-input"
+                />
+              </div>
+
               <div className="col-md-6">
                 <label className="form-label">Email</label>
                 <input
                   type="email"
                   className="form-control form-control-sm"
                   id="inputEmail4"
+                  required
                 />
               </div>
 
-              <div className="col-md-12 ">
+              <div className="col-md-6">
                 <label className="form-label ">Number</label>
-                <div className="input-group ">
-                  <div className="input-group-text">+1</div>
+                <div className="input-group input-group-sm ">
+                  <div className="input-group-text ">+1</div>
                   <input
                     type="text"
                     className="form-control form-control-sm"
                     id="inlineFormInputGroupUsername"
+                    required
                   />
                 </div>
               </div>
@@ -65,6 +79,7 @@ export default function OpenOrderModal() {
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
+                  required
                 >
                   <option selected value="0" className="text-warning">
                     Dominican cake
@@ -82,6 +97,7 @@ export default function OpenOrderModal() {
                 <select
                   className="form-select form-select-sm"
                   aria-label=".form-select-sm example"
+                  required
                 >
                   <option selected value="0">
                     Dulce de leche
@@ -105,13 +121,15 @@ export default function OpenOrderModal() {
                     id="formFile"
                   />
                 </div>
-                <div className="delivery-checkbox d-flex justify-content-center">
+
+                <div className="delivery-checkbox d-flex justify-content-center mt-4">
                   <div className="form-check form-check-inline">
                     <input
                       className="form-check-input mx-2"
                       name="delivery-pickup"
                       type="radio"
                       value="option1"
+                      required
                     />
                     <label className="form-check-label">Delivery</label>
                   </div>
@@ -121,6 +139,7 @@ export default function OpenOrderModal() {
                       name="delivery-pickup"
                       type="radio"
                       value="option2"
+                      required
                     />
                     <label className="form-check-label">Pick up</label>
                   </div>
@@ -162,28 +181,22 @@ export default function OpenOrderModal() {
                 />
               </div>
               <div className="col-12">
-                {/* <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    id="gridCheck"
-                  />
-                  <label className="form-check-label">Check me out</label>
-                </div> */}
-                <p className="payment-info text-center fw-bolder">
-                  Payment will be accepted as cash or money transfer
-                </p>
+                <div className="mb-3">
+                  <label className="form-label">Add your comments</label>
+                  <textarea
+                    className="form-control form-control-sm"
+                    id="exampleFormControlTextarea1"
+                    rows={3}
+                    style={{ resize: "none" }}
+                  ></textarea>
+                </div>
+                {/* <p className="payment-info text-center fw-bolder text-danger">
+                  Payment will be accepted via cash or money transfer
+                </p> */}
               </div>
             </form>
           </div>
           <div className="modal-footer">
-            {/* <button
-              type="button"
-              className="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button> */}
             <button type="button" className="btn btn-success">
               Add to the cart
             </button>
