@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-interface CartItem {
+export interface CartItem {
   name: string;
   date: string;
   email: string;
@@ -46,7 +46,7 @@ export default function OpenOrderModal({ setCartItems }: OpenOrderModalProps) {
     event.preventDefault();
     const newCartItems = [...cartItems, formData];
     console.log(newCartItems); // Console log the newly created object
-    // setCartItems(newCartItems);
+    setCartItems(newCartItems);
   };
 
   const handleInputChange = (

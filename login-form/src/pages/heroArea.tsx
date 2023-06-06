@@ -1,5 +1,5 @@
 import { useState } from "react";
-import OpenOrderModal from "./order-form";
+import OpenOrderModal, { CartItem } from "./order-form";
 import { useEffect } from "react";
 
 declare global {
@@ -9,6 +9,8 @@ declare global {
 }
 
 export default function Hero() {
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
   const handleOrderNowClick = () => {
     const modal = new window.bootstrap.Modal(
       document.getElementById("orderModal")
@@ -36,8 +38,6 @@ export default function Hero() {
               <button
                 type="button"
                 className="btn btn-outline-success btn-lg"
-                // data-bs-toggle="modal"
-                // data-bs-target="#orderModal"
                 onClick={handleOrderNowClick}
               >
                 Order now
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <OpenOrderModal />
+      <OpenOrderModal setCartItems={setCartItems} />
     </>
   );
 }

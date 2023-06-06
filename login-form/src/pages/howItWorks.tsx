@@ -6,7 +6,7 @@ import Customer from "../assets/customer.png";
 import delivery from "../assets/delivery-service.png";
 import order from "../assets/order.png";
 import piping from "../assets/piping.png";
-import OpenOrderModal from "./order-form";
+import OpenOrderModal, { CartItem } from "./order-form";
 
 declare global {
   interface Window {
@@ -15,6 +15,8 @@ declare global {
 }
 
 export default function HowItWorks() {
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
   const handleOrderNowClick = () => {
     const modal = new window.bootstrap.Modal(
       document.getElementById("orderModal")
@@ -153,7 +155,7 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <OpenOrderModal />
+      <OpenOrderModal setCartItems={setCartItems} />
     </>
   );
 }
