@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Logo from "../assets/new logo.png";
+import ConfirmOrder from "./confirm-order";
 
 export default function NavBar() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <nav className="navbar sticky-top navbar-expand-lg bg-body-tertiary ">
@@ -77,7 +80,11 @@ export default function NavBar() {
                 Search
               </button>
             </form>
-            <div className="shopping-cart d-flex me-5">
+            <button
+              type="button"
+              className=" shopping-cart d-flex me-5"
+              onClick={() => setShowModal(true)}
+            >
               <a className="cart my-auto mx-2 text-success fw-bolder" href="#">
                 Cart
               </a>
@@ -85,9 +92,10 @@ export default function NavBar() {
                 className="bi bi-cart"
                 style={{ fontSize: "2rem", color: "green" }}
               ></i>
-            </div>
+            </button>
           </div>
         </div>
+        <ConfirmOrder showModal={showModal} setShowModal={setShowModal} />
       </nav>
     </>
   );

@@ -3,7 +3,7 @@ import { useState } from "react";
 type ConfirmOrderProps = {
   showModal: boolean;
   setShowModal: (value: boolean) => void;
-  name: string;
+  //   name: string;
 };
 
 export default function ConfirmOrder({
@@ -18,6 +18,7 @@ export default function ConfirmOrder({
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
       style={{ display: showModal ? "block" : "none" }}
+      onClick={() => setShowModal(false)}
     >
       <div className="modal-dialog modal-dialog-centered text-success">
         <div className="modal-content">
@@ -36,9 +37,7 @@ export default function ConfirmOrder({
               onClick={() => setShowModal(false)}
             ></button>
           </div>
-          <div className="modal-body">
-            <p>{name!}</p>
-          </div>
+          <div className="modal-body">...</div>
           <div className="modal-footer">
             {/* <button
               type="button"

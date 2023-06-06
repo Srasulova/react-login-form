@@ -132,6 +132,16 @@ a {
   text-decoration: none !important;
 }
 
+.shopping-cart {
+  border: none;
+  background: transparent;
+}
+
+.shopping-cart:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 4px rgba(14, 126, 10, 0.5));
+}
+
 /* Hero area custom styling */
 
 .hero-parent {

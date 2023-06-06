@@ -1,22 +1,3 @@
-//   import React from 'react';
-// import data from './data';
-
-// const AnotherComponent = () => {
-//   // Access and use the data array as needed
-//   return (
-//     <div>
-//       {data.map(item => (
-//         <div key={item.id}>
-//           <h2>{item.name}</h2>
-//           <img src={item.imageUrl} alt={item.name} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default AnotherComponent;
-
 import pic1 from "../assets/gallery pictures/1.png";
 import pic2 from "../assets/gallery pictures/2.png";
 import pic3 from "../assets/gallery pictures/3.png";
