@@ -65,5 +65,3 @@ export default function WhatWeMake() {
     </>
   );
 }
-
-// change the way images look - done
