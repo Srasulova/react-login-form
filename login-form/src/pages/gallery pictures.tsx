@@ -42,6 +42,15 @@ import pic38 from "../assets/gallery pictures/38.png";
 import pic39 from "../assets/gallery pictures/39.png";
 import pic40 from "../assets/gallery pictures/40.png";
 
+// const images = [];
+
+// for (let i = 1; i <= 40; i++) {
+//   const imagePath = `../assets/gallery pictures/${i}.png`;
+//   const image = import(imagePath);
+
+//   images.push(image);
+// }
+
 const galleryPictures = [
   {
     id: 1,
